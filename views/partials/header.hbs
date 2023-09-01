@@ -1,0 +1,33 @@
+<nav class="menu container">
+  <a class="container logo" href="/" aria-label="Back to Home">
+    <img src="../../public/logo/cat-logo.png">
+  </a>
+  <ul class="container bar">
+    <li>
+      <a href="/catalog">Catalog</a>
+    </li>
+    <li>
+      <a href="/feedback">Feedback</a>
+    </li>
+    <li>
+      <a href="/aboutUs">About us</a>
+    </li>
+  </ul>
+  <div class="container profile">
+    {{#if user}}
+      <div class="profile item"> Your login: <b>{{user}}</b>></div>
+    {{/if}}
+    <ul class="profile bar">
+      <li>
+        <a href="/profile">
+          {{#if user}}
+            Личный кабинет
+          {{else}}
+            Войти
+          {{/if}}
+        </a>
+      </li>
+    </ul>
+  </div>
+</nav>
+

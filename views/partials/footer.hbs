@@ -1,0 +1,16 @@
+<footer id="footer">
+  © tanuki_er, 2023 | {{time}} ms (server) +
+</footer>
+
+<script>
+  const start = new Date().getTime();
+
+  (function () {
+    document.addEventListener('DOMContentLoaded', function () {
+      window.addEventListener('load', () => {
+        const end = new Date().getTime();
+        document.getElementById('footer').innerHTML += `${ end - start } ms (client)`
+      });
+    });
+  })();
+</script>
